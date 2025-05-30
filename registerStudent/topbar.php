@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand navbar-light bg-gradient-primary topbar mb-4 static-top">
   <a class="navbar-brand d-flex align-items-center text-white" href="index.php">
     <!-- <img src="img/logo/attnlg.jpg" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;"> -->
-    <img src="../img/logo/attnlg.jpg" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
+    <img src="../img/logo/icon.ico" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
     <span class="font-weight-bold">JEC HOSTEL</span>
   </a>
 

@@ -1,73 +1,47 @@
-
-<?php 
-
-  // $query = "SELECT * FROM tblclassteacher WHERE Id = ".$_SESSION['userId']."";
-  // $rs = $conn->query($query);
-  // $num = $rs->num_rows;
-  // $rows = $rs->fetch_assoc();
-  // $fullName = $rows['firstName']." ".$rows['lastName'];;
-
+<?php
+// Start of PHP section, you can handle sessions or logic here if needed.
 ?>
-<nav class="navbar navbar-expand navbar-light bg-gradient-primary topbar mb-4 static-top">
-  <a class="navbar-brand d-flex align-items-center text-white" href="index.php">
-    <img src="img/logo/attnlg.jpg" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
-    <span class="font-weight-bold">JEC HOSTEL</span>
+
+
+
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient-primary px-3">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="img/logo/attnlg.jpg" alt="JEC Hostel Logo" width="40" height="40" class="rounded-circle me-2 shadow">
+    <span class="fw-bold fs-5">JEC HOSTEL</span>
   </a>
+  <div class="ml-auto">
+      <a href="./registerStudent/register.php" class="btn btn-light btn-sm mr-2">Sign Up</a>
+      <a href="index.php" class="btn btn-light btn-sm">Login</a>
+    </div> 
+</nav>-->
 
 
-      <!-- <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button> -->
-        <div class="text-white big" style="margin-left:100px;"></div>
-          <ul class="navbar-nav ml-auto">
-            <!--<li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>-->
-          
-            <!-- <div class="topbar-divider d-none d-sm-block"></div>
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/user-icn.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small"><b>Welcome <?php echo $fullName;?></b></span> 
-                
-              </a>
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <!-- <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a> -->
-                <!--<div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="logout.php">
-                <i class="fas fa-power-off fa-fw mr-2 text-danger"></i>
-                  Logout
-                </a>
-              </div>
-            </li> -->
-          </ul>
-        </nav>
+<nav class="navbar navbar-expand-md navbar-dark  bg-gradient-primary" style="background-color:#EFFDFE;">
+   
+    <a class="navbar-brand" href="#">
+      <!-- <img src="img/logo/attnlg.jpg" width="40" height="40" alt="" class="ml-4"> -->
+      <!-- <img src="img/atlate.png" width="170" height="70" alt="" class="ml-4">  -->
+   <img src="img/jeclogo.png" alt="Logo"
+     class="ml-4 w-[200px] h-[10px] rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer" style="position: relative;">
+    </a>
+    <div class="ml-auto">
+      <img src="img/header.png" alt="Logo"
+        class="ml-4 w-[600px] h-[40px] rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+    </div>
+    <div class="text-justify ml-4">
+        <div class="color:#ffff">Jabalpur - 482011. M.P.-India.<br>
+        Phone : 91-761- 2331953<br>
+        e-mail: prinjec.jbp@mp.gov.in</h4></div>
+      </div>
+    <div class="ml-auto">
+       
+      <a href="./registerStudent/register.php" class="btn btn-light btn-sm mr-2 bg-primary">Sign Up</a>
+      <a href="index.php" class="btn btn-light btn-sm bg-primary">Login</a>
+    </div>
+ 
+
+
+  </nav>
+  

@@ -8,9 +8,13 @@ session_start();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JEC Hostel</title>
-  <link rel="icon" href="img/logo/attnlg.jpg">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="img/logo/icon.ico">
+  
+  <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (optional) -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -20,7 +24,6 @@ session_start();
     body {
       font-family: 'Poppins', sans-serif;
     }
-
     .navbar {
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
@@ -107,20 +110,30 @@ session_start();
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
+
+    .btn-signup {
+  background-color: #28a745; /* green */
+  color: white;
+}
+
+.btn-login {
+  background-color: #ffc107; /* yellow */
+  color: black;
+}
+
+.btn-signup:hover,
+.btn-login:hover {
+  opacity: 0.9;
+}
+
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-      <img src="img/logo/attnlg.jpg" width="40" height="40" alt=""> JEC HOSTEL
-    </a>
-    <div class="ml-auto">
-      <a href="./registerStudent/register.php" class="btn btn-light btn-sm mr-2">Sign Up</a>
-      <a href="index.php" class="btn btn-light btn-sm">Login</a>
-    </div>
-    
-  </nav>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
+ 
+<?php include "topbar.php"?>
+
 
   <!-- HERO SECTION -->
   <div class="hero-section">
@@ -197,31 +210,42 @@ session_start();
 </section>
 
 
-  <!-- TESTIMONIAL SECTION -->
-  <section class="container my-5 testimonial-section">
-    <h2 class="text-center testimonial-title">Testimonials</h2>
-    <div class="row">
-      <div class="swiper testimonialSwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <blockquote class="blockquote text-center">
-        <p>"The best hostel experience I've had."</p>
-        <footer class="blockquote-footer">Amit Sharma</footer>
-      </blockquote>
-    </div>
-    <div class="swiper-slide">
-      <blockquote class="blockquote text-center">
-        <p>"Feels like home! Loved the food."</p>
-        <footer class="blockquote-footer">Sneha Patel</footer>
-      </blockquote>
-    </div>
-    <!-- Add more slides here -->
-  </div>
-  <div class="swiper-pagination"></div>
-</div>
+<!-- Testimonial Section -->
+<section class="container my-5 testimonial-section">
+  <h2 class="text-center mb-4 testimonial-title">Testimonials</h2>
+
+  <div class="swiper testimonialSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="card text-center border-0 shadow-sm p-4">
+          <!-- <img src="img/slide1.png" class="rounded-circle mx-auto mb-3" width="100" height="100" alt="Amit Sharma"> -->
+          <blockquote class="blockquote mb-2">
+            <p>"The best hostel experience I've had."</p>
+          </blockquote>
+          <footer class="blockquote-footer">Amit Sharma<br><small>Hostel Warden</small></footer>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="card text-center border-0 shadow-sm p-4">
+          <!-- <img src="img/faculty2.jpg" class="rounded-circle mx-auto mb-3" width="100" height="100" alt="Sneha Patel"> -->
+          <blockquote class="blockquote mb-2">
+            <p>"Feels like home! Loved the food."</p>
+          </blockquote>
+          <footer class="blockquote-footer">Sneha Patel<br><small>Student</small></footer>
+        </div>
+      </div>
+
+      <!-- Add more slides below in same format -->
 
     </div>
-  </section>
+    <div class="swiper-pagination mt-3"></div>
+  </div>
+</section>
+
 
 <!-- CONTACT SECTION -->
   <section class="container-fluid my-5 facilities-section px-5">
@@ -236,10 +260,11 @@ session_start();
       </section>  
       </div>
       <div class="col-md-3 d-flex align-items-center about-text text-justify">
+        <div><h5 class="text-center testimonial-title">Contact Us</h5>
         <h4>Jabalpur Engineering College
         JEC, Gokalpur<br>Jabalpur - 482011. M.P.-India.<br>
         Phone : 91-761- 2331953<br>
-        e-mail: prinjec.jbp@mp.gov.in</h4>
+        e-mail: prinjec.jbp@mp.gov.in</h4></div>
       </div>
     </div>
   </section>
@@ -342,5 +367,8 @@ session_start();
       }
     });
   </script>
+  <!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

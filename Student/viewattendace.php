@@ -42,7 +42,7 @@ if (isset($_POST['mark'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Student Attendance</title>
-  <link href="img/logo/attnlg.jpg" rel="icon">
+  <link href="img/logo/icon.ico" rel="icon">
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">

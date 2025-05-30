@@ -13,7 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="img/logo/attnlg.jpg" rel="icon">
+    <link href="img/logo/icon.ico" rel="icon">
     <title>JEC Hostel - Login</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -31,11 +31,12 @@ session_start();
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="login-form">
-                                    <h5 align="center">JABALPUR ENGINEERING COLLEGE HOSTEL</h5>
+                                    <!-- <h5 align="center">JABALPUR ENGINEERING COLLEGE HOSTEL</h5> -->
+                                      <img src="img/logo/header.png" alt="JEC Hostel Header" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
                                     <div class="text-center">
-                                        <img src="img/logo/attnlg.jpg" style="width:100px;height:100px">
+                                        <img src="img/jeclogo.png" style="width:200px;height:170px">
                                         <br><br>
-                                        <h1 class="h4 text-gray-900 mb-4">Login Panel</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login </h1>
                                         
                                     </div>
                                     <form class="user" method="Post" action="">

@@ -27,7 +27,7 @@ if ($rs->num_rows > 0) {
 <head>
   <meta charset="utf-8" />
   <title>Student ID Card</title>
-  <link rel="icon" href="img/logo/attnlg.jpg">
+  <link rel="icon" href="img/logo/icon.ico">
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <style>
@@ -99,9 +99,10 @@ if ($rs->num_rows > 0) {
 </head>
 <body>
 
-  <div class="print-heading">JEC HOSTEL ID CARD</div>
-
+  <!-- <div class="print-heading">JEC HOSTEL ID CARD</div> -->
+  
   <div class="id-card text-center">
+    <div class="print-heading"><img src="img/logo/IdCard.png" alt=""></div>
     <i class="fas fa-user-circle fa-5x text-primary mb-3"></i>
     <h4><?= $row['firstName'] . ' ' . $row['lastName'] ?></h4>
     <hr>
