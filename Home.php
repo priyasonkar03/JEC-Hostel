@@ -262,7 +262,7 @@ session_start();
       <div class="col-md-3 d-flex align-items-center about-text text-justify">
         <div><h5 class="text-center testimonial-title">Contact Us</h5>
         <h4>Jabalpur Engineering College
-        JEC, Gokalpur<br>Jabalpur - 482011. M.P.-India.<br>
+        (JEC), Gokalpur Jabalpur <br> - 482011. M.P.-India.<br>
         Phone : 91-761- 2331953<br>
         e-mail: prinjec.jbp@mp.gov.in</h4></div>
       </div>

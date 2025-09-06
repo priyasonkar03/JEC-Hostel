@@ -4,14 +4,27 @@ include '../Includes/dbcon.php';
 
 $userEmail = $_SESSION['email'];
 
-$query = "SELECT rs.*, s.roomId, s.classId, s.classArmId, s.admissionNumber 
-          FROM tblregstudents rs
-          JOIN tblstudents s ON rs.email = '$userEmail'
-          LIMIT 1";
-$rs = $conn->query($query);
+// Step 1: Get student from tblregstudents using email
+$regQuery = mysqli_query($conn, "SELECT * FROM tblregstudents WHERE email = '$userEmail' LIMIT 1");
 
-if ($rs->num_rows > 0) {
-  $row = $rs->fetch_assoc();
+if ($regQuery->num_rows > 0) {
+  $row = $regQuery->fetch_assoc();
+  $admissionNumber = $row['admissionNumber'];
+
+  // Step 2: Get data from tblstudents using admissionNumber
+  $studentQuery = mysqli_query($conn, "SELECT * FROM tblstudents WHERE admissionNumber = '$admissionNumber' LIMIT 1");
+  if ($studentQuery->num_rows > 0) {
+    $studentRow = $studentQuery->fetch_assoc();
+
+    // Merge student info into reg row
+    $row['roomId'] = $studentRow['roomId'];
+    $row['classId'] = $studentRow['classId'];
+    $row['classArmId'] = $studentRow['classArmId'];
+  } else {
+    $row['roomId'] = null;
+    $row['classId'] = null;
+    $row['classArmId'] = null;
+  }
 
   $roomDetails = ['roomNumber' => 'N/A', 'block' => 'N/A'];
   if (!empty($row['roomId'])) {
@@ -99,8 +112,6 @@ if ($rs->num_rows > 0) {
 </head>
 <body>
 
-  <!-- <div class="print-heading">JEC HOSTEL ID CARD</div> -->
-  
   <div class="id-card text-center">
     <div class="print-heading"><img src="img/logo/IdCard.png" alt=""></div>
     <i class="fas fa-user-circle fa-5x text-primary mb-3"></i>
@@ -122,11 +133,6 @@ if ($rs->num_rows > 0) {
       <div class="col-md-6"><i class="fas fa-bed"></i><strong> Room:</strong> <?= $roomDetails['roomNumber'] ?></div>
     </div>
 
-    <!-- <div class="row text-start mb-2">
-      <div class="col-md-6"><i class="fas fa-layer-group"></i><strong> Class:</strong> <?= $row['classId'] ?></div>
-      <div class="col-md-6"><i class="fas fa-code-branch"></i><strong> Class Arm:</strong> <?= $row['classArmId'] ?></div>
-    </div> -->
-
     <div class="row text-start mb-2">
       <div class="col-md-6"><i class="fas fa-bed"></i><strong> Hostel Type:</strong> <?= $row['hostelType'] ?></div>
       <div class="col-md-6"><i class="fas fa-calendar-alt"></i><strong> Session:</strong> <?= $row['session'] ?></div>
@@ -137,12 +143,7 @@ if ($rs->num_rows > 0) {
     </div>
   </div>
 
-  <!-- <div class="download-btn">
-    <button class="btn btn-primary" onclick="window.print()">
-      <i class="fas fa-download"></i> Download ID Card
-    </button>
-  </div>-->
-    <div class="d-flex justify-content-center mt-4" style="gap: 1rem;">
+  <div class="d-flex justify-content-center mt-4" style="gap: 1rem;">
     <button class="btn btn-primary" onclick="window.print()">
         <i class="fas fa-download"></i> Download ID Card
     </button>
@@ -150,8 +151,7 @@ if ($rs->num_rows > 0) {
     <a href="index.php" class="btn btn-primary text-white">
         Back To Home
     </a>
-    </div>
-
+  </div>
 
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

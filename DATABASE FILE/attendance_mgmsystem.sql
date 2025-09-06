@@ -389,6 +389,8 @@ INSERT INTO `tblregstudents` (`firstName`, `lastName`, `gender`, `dob`, `email`,
 VALUES 
 ('Ravi', 'Kumar', 'Male', '2004-05-10', 'ravi@example.com', '9876543210', '123 MG Road, Delhi', SHA2('securepass123', 256), 'OBC', '2021-2025', 'B.Tech', 'Computer Science', 89.50, 'Boy');
 
+ALTER TABLE tblregstudents ADD COLUMN admissionNumber VARCHAR(50) UNIQUE AFTER lastName;
+
 CREATE TABLE tblrooms (
   Id INT PRIMARY KEY AUTO_INCREMENT,
   roomNumber VARCHAR(50) NOT NULL,
